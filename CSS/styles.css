@@ -4,46 +4,99 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url();
+}
+
 :root {
     --color-nav: #1a1a1a;
     --color-text: #F1ECEC;
+    --color-nav-ocult: #555555;
 }
 
 header {
     background-color: var(--color-nav);
-    width: 100%;
-    height: 50px;
-    display: table;
-}
-
-img {
-    width: 400px;
-    margin-left: 5%;
-    display: table-cell;
-}
-
-header nav {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-}
-
-header nav ul {
-    list-style: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    padding-right: 23px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    font-size: 20px;
     color: var(--color-text);
+    padding: 10px;
+    text-align: center;
 }
 
-header nav ul a:hover {
+img[alt="LOGO"] {
+    width: 300px;
+    display: inline-block;
+}
+
+img[alt="MENU"]{
+    width: 50px;
+    display: inline-block;
+}
+
+.nav-hidden {
+    display: none;
+    position: absolute;
+}
+
+.nav-visible {
+    display: block;
+    background-color: var(--color-nav-ocult);
+    transform: translateX(0);
+    width: 65%;
+}
+
+img[alt="CLOSE"] {
+    display: none;
+}
+.close-icon{
+    display: none;
+    position: absolute;
+    top:20px;
+    right:20px;
+    width: 30px;
+    height: 30px;
+    z-index: 1100;
+}
+header img[alt="MENU"], header img[alt="CLOSE"] {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    transform: translateY(12%);
+}
+
+footer{
+    background-color: var(--color-nav);
+    color: var(--color-text);
+    padding: 1rem;
+    text-align: center;
+}
+
+img[alt="logo-footer"] {
+    width: 65px;
+    display: inline-block;
+}
+nav#nav-footer {
+    display: inline-block;
+}
+
+#nav-footer ul {
+    list-style: none;
+    display: inline-block;
+    justify-content: center;
+    padding: 10px;
+    width: fit-content;
+}
+
+#nav-footer ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#nav-footer ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+#nav-footer ul li a:hover {
     font-weight: bold;
     text-decoration: underline;
 }
