@@ -42,6 +42,25 @@ img[alt="MENU"]{
     background-color: var(--color-nav-ocult);
     transform: translateX(0);
     width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.nav-visible ul{
+    list-style: none;
+    padding: 10px;
+}
+
+.nav-visible ul li {
+    padding: 10px;
+}
+
+.nav-visible ul li a {
+    color: var(--color-text);
+    text-decoration: underline;
+    font-size: 50px;
 }
 
 img[alt="CLOSE"] {
