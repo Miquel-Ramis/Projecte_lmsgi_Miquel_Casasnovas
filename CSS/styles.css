@@ -5,14 +5,19 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url();
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "karla";
+    src: url(./fonts/Karla-Regular.ttf);
 }
 
 :root {
     --color-nav: #1a1a1a;
     --color-text: #F1ECEC;
-    --color-nav-ocult: #555555;
+    --color-nav-ocult: #181717;
 }
 
 header {
@@ -20,6 +25,7 @@ header {
     color: var(--color-text);
     padding: 10px;
     text-align: center;
+    font-family: "Roboto"; 
 }
 
 img[alt="LOGO"] {
@@ -45,23 +51,37 @@ img[alt="MENU"]{
     position: absolute;
     top: 0;
     right: 0;
+    display: table;
     height: 100%;
+    font-family: "Roboto";
+}
+
+.nav-visible img[alt="LOGO"]{
+    display:block;
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    transform: translateX(17%);
 }
 
 .nav-visible ul{
     list-style: none;
-    padding: 10px;
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
 }
 
 .nav-visible ul li {
-    padding: 10px;
+    padding-bottom: 40px;
 }
 
 .nav-visible ul li a {
     color: var(--color-text);
-    text-decoration: underline;
-    font-size: 50px;
+    text-decoration: none;
+    font-size: 45px;
 }
+
 
 img[alt="CLOSE"] {
     display: none;
@@ -69,10 +89,9 @@ img[alt="CLOSE"] {
 .close-icon{
     display: none;
     position: absolute;
-    top:20px;
+    top:10px;
     right:20px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
     z-index: 1100;
 }
 header img[alt="MENU"], header img[alt="CLOSE"] {
@@ -113,9 +132,11 @@ nav#nav-footer {
 #nav-footer ul li a {
     color: var(--color-text);
     text-decoration: none;
+    font-family: "Roboto";
 }
 
 #nav-footer ul li a:hover {
     font-weight: bold;
     text-decoration: underline;
 }
+
