@@ -16,3 +16,4 @@ closeIcon.addEventListener('click', () => {
     closeIcon.style.display = 'none';  
     btnmenu.style.display = 'inline-block';
 });
+
