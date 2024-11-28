@@ -21,6 +21,16 @@
     --color-fons: #272727;
 }
 
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    font-family: "Karla";
+}
+
 header {
     background-color: var(--color-nav);
     color: var(--color-text);
@@ -158,9 +168,10 @@ section {
     color: var(--color-text);
 }
 
-section h2 {
+section article h2 {
     font-family: "Roboto";
     font-size: 20px;
+    color: #FF6F00;
     padding: 10px;
 }
 
@@ -171,15 +182,27 @@ section p {
     text-align: justify;
 }
 
+.card {
+    background: linear-gradient(#161616, #01074e33);
+}
+
+.card:hover {
+    box-shadow: 0px 4px 15px #ff6b26;
+    transform: scale(1.05);
+}
+
+article hr {
+    border: 1px solid #007BFF;
+    width: 80%;
+    margin: auto;
+}
+
 section img {
     width: 100%;
     padding: 10px;
     height: 230px;
 }
 
-article {
-    padding: 1rem; 
-}
 main section article {
     border-style: solid;
     border-color: #F1ECEC;
@@ -188,20 +211,19 @@ main section article {
     margin: 10px;
 }
 
-div.elfsight-app-fb835ca1-6cfa-4832-9933-047fe1578e25 {
-    padding: 10px;
-    display: inline-block;
-    width: 100%;
-}
-
 @media(min-width: 1025px) {
     header img[alt="MENU"] {
         display: none;
     }
+
+    header {
+        height: 75px;
+    }
     header img[alt="LOGO"] {
         display: inline-block;
-        position: relative;
-        transform: translateX(-240%);
+        position: absolute;
+        left:0;
+        padding-left: 50px;
     }
     .nav-hidden img[alt="LOGO"]{
         display: none;
@@ -232,6 +254,18 @@ div.elfsight-app-fb835ca1-6cfa-4832-9933-047fe1578e25 {
     .nav-hidden ul li a:hover {
         font-weight: bold;
         text-decoration: underline;
+    }
+    section:second-child {
+        height: 400px;
+    }
+   
+    .card {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+        border-radius: 10px;
+        border: 2px solid #F1ECEC;
     }
 }
 
