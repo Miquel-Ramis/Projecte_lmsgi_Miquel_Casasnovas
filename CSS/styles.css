@@ -37,11 +37,34 @@ header {
     padding: 10px;
     text-align: center;
     font-family: "Roboto"; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+
 
 img[alt="LOGO"] {
     width: 300px;
     display: inline-block;
+}
+
+@media (min-width: 391px) {
+    img[alt="LOGO"] {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    img[alt="LOGO"] {
+        width: 200px;
+    }
+
+    img[alt="MENU"] {
+        width: 30px;
+        top:0;
+    }
 }
 
 img[alt="MENU"]{
@@ -59,14 +82,15 @@ img[alt="MENU"]{
     background-color: var(--color-nav-ocult);
     transform: translateX(10px);
     width: 85%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: table;
     height: 100%;
-    z-index: 1;
+    z-index: 1100;
     font-family: "Roboto";
     border-radius: 10px;
+    overflow-y: auto;
 }
 
 .nav-visible img[alt="LOGO"]{
@@ -105,7 +129,7 @@ img[alt="CLOSE"] {
     top:10px;
     right:20px;
     width: 50px;
-    z-index: 1100;
+    z-index: 1110;
 }
 header img[alt="MENU"], header img[alt="CLOSE"] {
     cursor: pointer;
@@ -161,6 +185,11 @@ footer p {
 body{
     background-color: var(--color-fons);
 }
+
+section:first-child{
+    margin-top: 75px;
+}
+
 section {
     padding: 1rem;
     text-align: center;
@@ -269,4 +298,63 @@ main section article {
     }
 }
 
+@media (min-width: 577px) and (max-width: 1024px) {
+    section {
+        display: inline-block;
+        justify-content: center;
+    }
 
+    .card {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    header img[alt="MENU"] {
+        display: none;
+    }
+
+    header {
+        height: 75px;
+    }
+    header img[alt="LOGO"] {
+        display: inline-block;
+        position: absolute;
+        left:0;
+        padding-left: 50px;
+    }
+    .nav-hidden img[alt="LOGO"]{
+        display: none;
+    }
+    header .nav-hidden {
+        display: inline-block;
+        right: 20px;
+    }
+
+    .nav-hidden ul {
+        list-style: none;
+        display: inline-block;
+        justify-content: right;
+        padding: 10px;
+    }
+
+    .nav-hidden ul li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .nav-hidden ul li a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-family: "Roboto";
+    }
+
+    .nav-hidden ul li a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    section > article:nth-child(3) {
+        display: none;
+    }
+}
